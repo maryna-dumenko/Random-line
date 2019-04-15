@@ -141,7 +141,7 @@ function RenderLines(parameters, parentElement) {
     };
 };
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     let lines = new RenderLines(params, document.getElementById('app'));
     lines.init();
 };
