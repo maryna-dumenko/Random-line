@@ -141,7 +141,5 @@ function RenderLines(parameters, parentElement) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    let lines = new RenderLines(params, document.getElementById('app'));
-    lines.init();
-})
+let lines = new RenderLines(params, document.getElementById('app'));
+lines.init();
