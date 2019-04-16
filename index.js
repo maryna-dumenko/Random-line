@@ -92,7 +92,7 @@ var params = {
             ]
         }
     ]
-};
+}
 
 getRandomColor = function() {
     let letters = '0123456789ABCDEF';
@@ -101,7 +101,7 @@ getRandomColor = function() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-};
+}
 
 function RenderLines(parameters, parentElement) {
     this.linesArray = parameters.lines;
@@ -117,10 +117,10 @@ function RenderLines(parameters, parentElement) {
                 lineElem.style.backgroundColor = getRandomColor();
             }, line.updateTime);
             domLine.appendChild(lineElem);
-        });
+        })
 
         return domLine;
-    };
+    }
     
     this.createElem = function (elem, backgroundEl, widthEl, heightEl, classEl) {
         let domElem = document.createElement("div");
@@ -132,16 +132,16 @@ function RenderLines(parameters, parentElement) {
             domElem.className = classEl;
         }
         return domElem;
-    };
+    }
 
     this.init = function() {
         this.linesArray.map(function(line) {
             parentElement.appendChild(self.renderLine(line, line.background, 100, self.lineHeight));
-        });
-    };
-};
+        })
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     let lines = new RenderLines(params, document.getElementById('app'));
     lines.init();
-};
+})
